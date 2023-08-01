@@ -20,6 +20,9 @@ DEFAULT_PACKAGES += \
 	ath11k-firmware-ipq6018 nss-firmware-ipq6018 \
 	kmod-qca-nss-drv-pppoe kmod-qca-nss-ecm \
         kmod-qca-nss-drv-bridge-mgr uboot-envtools \
-        autocore-arm luci-app-upnp
+        autocore-arm luci-app-arpbind \
+        luci-app-turboacc luci-app-upnp luci-app-ramfree \
+        luci-app-filetransfer luci-app-autoreboot 
+        
 
 $(eval $(call BuildTarget))
