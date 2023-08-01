@@ -84,12 +84,14 @@ DRV_MAKE_OPTS+= \
         NSS_DRV_RMNET_ENABLE=n \
         NSS_DRV_SHAPER_ENABLE=n \
         NSS_DRV_SJACK_ENABLE=n \
-        NSS_DRV_TLS_ENABLE=n \
+        NSS_DRV_TLS_ENABLE=y \
         NSS_DRV_TRUSTSEC_ENABLE=n \
         NSS_DRV_TSTAMP_ENABLE=n \
         NSS_DRV_TUN6RD_ENABLE=n \
         NSS_DRV_TUNIPIP6_ENABLE=n \
-        NSS_DRV_VXLAN_ENABLE=n
+        NSS_DRV_PPPOE_ENABLE=y \
+        NSS_DRV_BRIDGE_ENABLE=y \
+        NSS_DRV_VXLAN_ENABLE=y
 endif
 
 define Build/Configure
