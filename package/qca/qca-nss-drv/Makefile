@@ -3,11 +3,11 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=qca-nss-drv
 PKG_RELEASE:=1
 
+PKG_SOURCE_URL:=https://git.codelinaro.org/clo/qsdk/oss/lklm/nss-drv.git
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_DATE:=2021-07-05
-PKG_SOURCE_URL:=https://git.codelinaro.org/clo/qsdk/oss/lklm/nss-drv
-PKG_SOURCE_VERSION:=f81f02ba2c2093b17a7d4576f3ae2e947498df18
-PKG_MIRROR_HASH:=510ff6c0eb844cfd459c6e7225bc9df2d4994de16155fa91a981a1a30ef9fcab
+PKG_SOURCE_DATE:=2022-06-15
+PKG_SOURCE_VERSION:=0bbd153ec2698a17e9dd32dd72a2c65f22b449e0
+PKG_MIRROR_HASH:=96429842f32c23ff8ce4a9ec6723770875a7b8ba6fb9c62f62a7bf9c8a3078fc
 
 include $(INCLUDE_DIR)/kernel.mk
 include $(INCLUDE_DIR)/package.mk
@@ -89,9 +89,15 @@ DRV_MAKE_OPTS+= \
         NSS_DRV_TSTAMP_ENABLE=n \
         NSS_DRV_TUN6RD_ENABLE=n \
         NSS_DRV_TUNIPIP6_ENABLE=n \
+        NSS_DRV_VXLAN_ENABLE=y \
+        NSS_DRV_MATCH_ENABLE=n \
+        NSS_DRV_MIRROR_ENABLE=n \
         NSS_DRV_PPPOE_ENABLE=y \
+        NSS_DRV_VIRT_IF_ENABLE=n \
+        NSS_DRV_VLAN_ENABLE=y \
         NSS_DRV_BRIDGE_ENABLE=y \
-        NSS_DRV_VXLAN_ENABLE=y
+        NSS_DRV_WIFI_EXT_VDEV_ENABLE=n \
+        NSS_DRV_WIFI_MESH_ENABLE=n
 endif
 
 define Build/Configure
