@@ -22,7 +22,8 @@ DEFAULT_PACKAGES += \
         kmod-qca-nss-drv-bridge-mgr uboot-envtools \
         autocore-arm luci-app-arpbind \
         luci-app-turboacc luci-app-upnp luci-app-ramfree \
-        luci-app-filetransfer luci-app-autoreboot 
+        luci-app-filetransfer luci-app-autoreboot \
+	kmod-qca-nss-crypto nss-eip-firmware
         
 
 $(eval $(call BuildTarget))
